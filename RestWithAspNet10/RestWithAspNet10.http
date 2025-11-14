@@ -1,6 +1,6 @@
-@RestWithAspNet10_HostAddress = http://localhost:5179
+@RestWithAspNet10_HostAddress = http://localhost:5180
 
-GET {{RestWithAspNet10_HostAddress}}/weatherforecast/
+GET {{RestWithAspNet10_HostAddress}}/greeting/
 Accept: application/json
 
 ###
