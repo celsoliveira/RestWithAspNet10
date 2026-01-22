@@ -7,6 +7,7 @@ namespace RestWithAspNet10.Model
     [Table("person")]
     public class Person
     {
+        
         [Key]
         [Column("id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

@@ -12,6 +12,9 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddDatabaseConfiguration(builder.Configuration);
 
+//Serilog para log da aplicação
+builder.AddSerilogLogging();
+
 builder.Services.AddScoped<IPersonServices, PersonServicesImpl>();
 
 var app = builder.Build();

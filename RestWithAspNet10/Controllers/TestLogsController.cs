@@ -1,0 +1,32 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using RestWithAspNet10.Services;
+
+namespace RestWithAspNet10.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class TestLogsController : ControllerBase
+    {
+
+        private readonly ILogger<PersonController> _logger;
+
+        public TestLogsController(ILogger<PersonController> logger)
+        {
+            _logger = logger;
+        }
+
+        [HttpGet]
+        public IActionResult LogTest()
+        {
+            _logger.LogTrace("This is a TRACE log message.");
+            _logger.LogDebug("This is a DEBUG log message.");
+            _logger.LogInformation("This is a INFORMATION log message.");
+            _logger.LogWarning("This is a WARNING log message.");
+            _logger.LogError("This is a ERROR log message.");
+            _logger.LogCritical("This is a CRITICAL log message.");
+
+            return Ok("Log Messages have been generated. Check your logging output.");
+        }
+
+    }
+}

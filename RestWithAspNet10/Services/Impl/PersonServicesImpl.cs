@@ -22,7 +22,6 @@ namespace RestWithAspNet10.Services.Impl
                 persons.Add(MockPerson(1));
             }
             */
-
             return _context.Persons.ToList();
         }
 
